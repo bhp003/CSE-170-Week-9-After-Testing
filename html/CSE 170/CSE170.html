@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyArVp7U0j6kVH-NfQ3pQHprGPPzxF7YWnU",
+        authDomain: "cse-170-e213b.firebaseapp.com",
+        projectId: "cse-170-e213b"
+      };
+      firebase.initializeApp(config);
+      firebase.firestore().settings({
+        timestampsInSnapshots: true
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../css/class.css">
+    <title>CSE 170</title>
+  </head>
+  
+  <body class="body">
+	<div class="titlebox">
+		<h1 align="center">CSE 170</h1>
+	</div>
+    <div align="center" style="margin-bottom:40px">
+      <button class="askbtn" id="ask" onclick="window.location.href='../ask_question.html'">Ask a question</button>
+    </div>
+    <div id="qa_section" class="qa_column" align="center" style="vertical-align:middle;">
+    </div>
+
+    <script src="../../js/classpage.js"></script>
+    <script>getQuestion("CSE 170");</script>
+  </body>
+</html>

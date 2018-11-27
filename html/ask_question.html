@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+      <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyArVp7U0j6kVH-NfQ3pQHprGPPzxF7YWnU",
+          authDomain: "cse-170-e213b.firebaseapp.com",
+          projectId: "cse-170-e213b"
+        };
+        firebase.initializeApp(config);
+        firebase.firestore().settings({
+          timestampsInSnapshots: true
+        });
+      </script>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Ask a question</title>
+      <meta name="description" content="An interactive getting started guide for Brackets.">
+      <link rel="stylesheet" href="../css/ask_question.css">
+    </head>
+    
+    <body>
+      <div class='newpost'>
+        <section class='newpost1'>
+          <h1 style="text-align: center;font-weight: bold;font-size:30px;margin-bottom: 5rem;">Ask a Question</h1>
+          <p>Choose the community that fits best for your post:</p>
+          <div id='mainselection'>
+            <select class='category1 custom-select'>
+              <option class='schoolchoice'>Select Department</option>
+              <option class='schoolchoice'>Sciences</option>
+              <option class='schoolchoice'>Math</option>
+              <option class='schoolchoice'>Arts</option>
+            </select>  
+            <span >
+              <select id ="classes" class='category2 custom-select'>
+                <option class='categorychoice'>Select a Class</option>
+                <option class='categorychoice' value='CSE 170'>CSE 170</option>
+              </select>
+            </span>
+          </div>
+        </section>
+        
+        <section class='newpost2' align="center">
+          <h3>Post Details</h3>
+          <div style="left:10%" class='formbox'>
+            <p class='required'>Required fields are marked with <span class='red'>*</span></p>
+            <div>
+              <section>  
+                <label class='required'>Title <span class='red'>*</span></label>
+                <input id='title' type='text' name='title' required></input>
+              </section>    
+
+              <section>
+                <label class='required' >Question <span class='red'>*</span></label>
+                <textarea align="left" id='desc' rows="6" title='Enter a short description over 30 characters' cols="36" required minLength="30">
+                </textarea>    
+              </section>    
+            </div>
+          </div>                
+        </section>
+        
+        <div class='button'>
+					<input id="submit" class='continuebutton' style="width:400px;margin: auto;" type="button" value="Post this Question"/>
+        </div>
+      </div> 
+      <script src="../js/ask_question.js"></script>
+    </body>
+</html>

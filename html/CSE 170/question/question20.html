@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyArVp7U0j6kVH-NfQ3pQHprGPPzxF7YWnU",
+        authDomain: "cse-170-e213b.firebaseapp.com",
+        projectId: "cse-170-e213b"
+      };
+      firebase.initializeApp(config);
+      firebase.firestore().settings({
+        timestampsInSnapshots: true
+      });
+    </script>
+    <title>Question 10</title>
+	<link rel="stylesheet" type="text/css" href="../../../css/question.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div>
+      <h1 id="title" ></h1>
+    </div>
+    <div id="question"></div>
+    <hr width="100%">
+    <div class="abox" id="answers"></div>
+    <script src="../../../js/question.js"></script>
+    <script>makePage(20, "CSE 170");</script>
+  </body>
+</html>

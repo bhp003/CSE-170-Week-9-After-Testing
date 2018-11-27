@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyArVp7U0j6kVH-NfQ3pQHprGPPzxF7YWnU",
+        authDomain: "cse-170-e213b.firebaseapp.com",
+        projectId: "cse-170-e213b"
+      };
+      firebase.initializeApp(config);
+      firebase.firestore().settings({
+        timestampsInSnapshots: true
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+  </head>
+  
+  <body>  
+    <div class="title">
+      <h1>App Title</h1>
+    </div>
+    
+    <form autocomplete="off" class="search" align="center">
+      <div class="autocomplete">
+        <input id="input" type="text" placeholder="Search" name="course">
+      </div>
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <h1 id="historyText">History</h1>
+    <div class="history" id="hist"></div>
+    <script src="js/search.js"></script>
+  </body>
+</html>
